@@ -14,8 +14,7 @@ namespace buu_nuoc
                 while (true)
                 {
                     Console.WriteLine("====== Water Bill ======");
-                    GetuserName();
-                    // Enter water indicators
+                    GetuserName();                  
                     double LMW = Getnumber("Enter the last month water meter: ");
                     double TMW = Getnumber("Enter the this month water meter: ");
                     while (TMW < LMW)
@@ -58,14 +57,14 @@ namespace buu_nuoc
                 Console.Write("Enter username: ");
                 return Console.ReadLine();
             }
-
+            
             static double Getnumber(string message)
             {
                 Console.Write(message);
                 double number;
                 while (!double.TryParse(Console.ReadLine(), out number))
                 {
-                    Console.WriteLine("Error");
+                    Console.Write("Re-enter the number water: ");
 
                 }
 
